@@ -1,0 +1,12 @@
+#live-video-section, .video-upload-section {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 400px;
+}
+
+video {
+  display: block;
+  margin-bottom: 10px;
+  background: #222;
+}
