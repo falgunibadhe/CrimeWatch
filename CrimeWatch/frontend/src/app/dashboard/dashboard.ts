@@ -110,7 +110,7 @@ export class DashboardComponent {
       }
     }
   }
-
+//stop live stream
   stopLiveVideo() {
     if (this.mediaStream) {
       this.mediaStream.getTracks().forEach(track => track.stop());
