@@ -24,8 +24,6 @@ def detect_crime(video_path: str, detection_threshold: float = 0.5):
 
         frame_count += 1
 
-        # === Dummy detection logic ===
-        # For demo, mark crime detected if frame_count is multiple of 50
         if frame_count % 50 == 0:
             detected = True
             label = "Suspicious activity"

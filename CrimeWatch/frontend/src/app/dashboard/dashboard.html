@@ -12,19 +12,12 @@
   <p><strong>Status:</strong> {{ latestAlert.status }}</p>
 </div> -->
 
-<div style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; width: 400px;">
-  <h4>Upload Video</h4>
-  <input type="file" accept="video/*" (change)="onVideoSelected($event)">
-  <button (click)="uploadVideo()" [disabled]="!selectedVideo">Upload</button>
-  <div *ngIf="uploadedVideoUrl">
-    <h5>Preview:</h5>
-    <video [src]="uploadedVideoUrl" controls width="300"></video>
-  </div>
-</div>
-
-<div id="live-video-section" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; width: 400px;">
+<div id="live-video-section" class="video-section">
   <h4>Live Video</h4>
-  <video #liveVideo width="400" height="300" autoplay muted></video>
+  <div class="video-container">
+    <video #liveVideo width="400" height="300" autoplay muted></video>
+    <div class="timestamp" *ngIf="isLive">{{ currentTime }}</div>
+  </div>
   <p *ngIf="!isLive">Live video not started.</p>
   <button (click)="startLiveVideo()" [disabled]="isLive">Start Live Video</button>
   <button (click)="stopLiveVideo()" [disabled]="!isLive">Stop Live Video</button>
