@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+twilio
+opencv-python
+pymongo
+sendgrid
+python-multipart
+ultralytics
+numpy
+pydantic
+python-jose[cryptography]
+pydantic[email]
+bcrypt==4.1.2 
+passlib[bcrypt]==1.7.4
